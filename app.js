@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const expresshbs = require('express-handlebars');
 
 const app = express();
-app.engine('hbs', expresshbs());
+app.engine('hbs', expresshbs({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout', extname: 'hbs'}));
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 
