@@ -24,7 +24,7 @@ router.post(
         // return true;
         return User.findOne({ email: value }).then((userDoc) => {
           if (userDoc) {
-            return new Promise.reject(
+            return Promise.reject(
               "E-Mail exists already, please pick a different one."
             );
           }
